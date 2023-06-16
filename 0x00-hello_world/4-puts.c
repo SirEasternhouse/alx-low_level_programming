@@ -1,5 +1,3 @@
-/* inclusion of library header */
-
 #include <stdio.h>
 
 /*
