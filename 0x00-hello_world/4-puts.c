@@ -6,10 +6,10 @@
  *
  *  return 0  shows successful execution.
  */
-int main(void)	
+int main(void)
 {
 	const char *message = "\"Programming is like building a multilingual puzzle";
 	
-	puts( message);
+	puts(message);
 	return(0);
 }
