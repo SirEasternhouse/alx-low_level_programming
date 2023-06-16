@@ -6,7 +6,8 @@
  *
  *  return 0  shows successful execution.
  */
-int main(void)
+int main(void) /** main is the startt of the function  */
+/* return of0 indicates successful execution of programe */
 {
 	const char *message = "\"Programming is like building a multilingual puzzle";
 	
