@@ -1,8 +1,11 @@
 #include <stdio.h>
 
-
+/**
+ *main - using printf command
+ *Return: printed out version of printf
+ */
 int main(void)
-{ /* using printf command */
-    printf("with proper grammar, but the outcome is a piece of art,\n");
-    return(0);
+{
+printf("with proper grammar, but the outcome is a piece of art,\n");
+return (0);
 }
