@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print alphabet excluding char
- * Result:0 show succesful execution
+ *main - alpha bet exludint e and q will be printed here
+ *
+ *Return:0 shows successful run
  */
 
 int main(void)
