@@ -4,7 +4,7 @@
  *main - printing the alphabet in small letters
  *Return:value of 0 indicates succeful execution
  */
-int main()
+int main(void)
 {
 	char alphabet;
 
