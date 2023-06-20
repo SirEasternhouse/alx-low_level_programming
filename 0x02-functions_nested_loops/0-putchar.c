@@ -7,23 +7,16 @@
  */
 int main(void)
 {
-	char c = '_';
-	char d = 'p';
-	char e = 'u';
-	char f = 't';
-	char g = 'c';
-	char h = 'h';
-	char i = 'a';
-	char j = 'r';
+	
+	int asciiValues[] = {95, 112, 117, 116, 99, 104, 97, 114};
+    	int length = sizeof(asciiValues) / sizeof(asciiValues[0]);
+    	int i;
 
-	_putchar(c);
-	_putchar(d);
-	_putchar(e);
-	_putchar(f);
-	_putchar(g);
-	_putchar(h);
-	_putchar(i);
-	_putchar(j);
-	_putchar('\n');
+
+    	for (i = 0; i < length; i++) 
+    	{
+        	_putchar((char)asciiValues[i]);
+    	}
+    	_putchar('\n');
 	return (0);
-}
+}	
