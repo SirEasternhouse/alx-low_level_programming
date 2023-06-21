@@ -16,7 +16,7 @@ int _isalpha(int c)
 
 	for (i = 0; i < 26; i++)
 	{
-		lower_case[i] = 'a' + i
+		lower_case[i] = 'a' + i;
 	}
 	for (j = 0; j < 26; j++)
 	{
