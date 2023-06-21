@@ -1,22 +1,26 @@
+#include <unistd.h>
+
 #include "main.h"
 
-/**
- * main - prints _putchar 
- *
- * Return: On success 0.
- */
 int main(void)
 {
-	
-	int asciiValues[] = {95, 112, 117, 116, 99, 104, 97, 114};
-    	int length = sizeof(asciiValues) / sizeof(asciiValues[0]);
-    	int i;
+	char a = '_';
+	char b = 'p';
+	char c = 'u';
+	char d = 't';
+	char e = 'c';
+	char f = 'h';
+	char g = 'a';
+	char h = 'r';
 
-
-    	for (i = 0; i < length; i++) 
-    	{
-        	_putchar((char)asciiValues[i]);
-    	}
-    	_putchar('\n');
-	return (0);
-}	
+	_putchar(a);
+	_putchar(b);
+	_putchar(c);
+	_putchar(d);
+	_putchar(e);
+	_putchar(f);
+	_putchar(g);
+	_putchar(h);
+	_putchar('\n');
+	return 0;
+}
