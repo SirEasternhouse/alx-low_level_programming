@@ -1,6 +1,11 @@
 #include <unistd.h>
-
 #include "main.h"
+
+/**
+ * main - printing of _putchar
+ *
+ * Return: sucess attempt 0
+ */
 
 int main(void)
 {
@@ -22,5 +27,5 @@ int main(void)
 	_putchar(g);
 	_putchar(h);
 	_putchar('\n');
-	return 0;
+	return (0);
 }
