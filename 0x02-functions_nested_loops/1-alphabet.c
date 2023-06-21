@@ -2,19 +2,15 @@
 #include "main.h"
 
 /**
- * main - printinh of alphabet
+ * print_alphabet - printinh of alphabet
  *
  * Return: success =0
  */
-
-int main(void)
-{
-	char c;
-
+void print_alphabet(void)
+{ char c;
 	for (c = 'a'; c <= 'z'; c++)
-        {
-                _putchar(c);
-        }
+	{
+		_putchar(c);
+	}
 	_putchar('\n');
-	return (0);
 }
