@@ -30,7 +30,6 @@ int _isalpha(int c)
 			return (1);
 		}
 	}
-	return (0);
 	for (j = 0; j < 26; j++)
 	{
 		if (c == upper_case[j])
