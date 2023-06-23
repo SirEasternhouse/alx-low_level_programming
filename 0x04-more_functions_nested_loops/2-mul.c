@@ -5,7 +5,6 @@
  * mul - multiply 2 numbers
  *@a: The character to input
  *@b: the character to input
- *@result: the result from a*b
  *
  * Return: 0 indicate success
  */
