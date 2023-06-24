@@ -10,26 +10,19 @@
 
 int print_sign(int n)
 {
-	while (n > 0)
+	if (n > 0)
 	{
 		_putchar('+');
-	}
-	while (n < 0)
-	{
-		_putchar('-');
-	}
-	while(n == 0)
-	{
-		_putchar('0');
-	}
-
-	if (n == '+')
-	{
 		return (1);
 	}
-	if (n == '-')
+	else if (n < 0)
 	{
+		_putchar('-');
 		return (-1);
+	}
+	else
+	{
+		_putchar('0');
 	}
 	return (0);
 
