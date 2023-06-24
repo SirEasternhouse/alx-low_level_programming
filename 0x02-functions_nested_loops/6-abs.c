@@ -3,7 +3,7 @@
 
 /**
  *_abs - compute the abs value of integer
- *@n: The character to print
+ *@i: The integer to print
  *
  * Return: success =1 & -1
  */
