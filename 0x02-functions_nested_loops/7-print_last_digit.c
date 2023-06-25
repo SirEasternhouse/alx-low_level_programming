@@ -6,7 +6,6 @@
  *
  * Return: the last didigts of a number
  */
-
 int print_last_digit(int i)
 {
 	if (i < 0)
@@ -14,6 +13,9 @@ int print_last_digit(int i)
 		i = -i;
 	}
 	i = i % 10;
-	_putchar('0' + i);
+	if (i >= 0 && i <= 9)
+	{
+		_putchar('0' + i);
+	}
 	return (i);
 }
