@@ -2,7 +2,7 @@
 
 /**
  * swap_int - swap the values of two integers
- * @a: value to be swapped 
+ * @a: value to be swapped
  * @b: values to be swapped
  *
  *
@@ -10,6 +10,8 @@
  */
 void swap_int(int *a, int *b)
 {
+	int temp = *a;
+
 	*a = *b;
-	*b = *a;
+	*b = temp;
 }
