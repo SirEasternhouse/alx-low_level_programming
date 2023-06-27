@@ -9,8 +9,8 @@
 
 void puts_half(char *str)
 {
-	int counter = 0;
 	int length = 0;
+	int position = 0;
 
 	while (str[length] != '\0')
 	{
@@ -18,11 +18,11 @@ void puts_half(char *str)
 	}
 	while (*str != '\0')
 	{
-		if (counter  >= length / 2)
+		if (position >= length / 2)
 		{
 			_putchar(*str);
 		}
-		counter++;
+		position++;
 		str++;
 	}
 	_putchar('\n');
