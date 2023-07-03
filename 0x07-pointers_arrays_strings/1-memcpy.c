@@ -3,6 +3,7 @@
  *_memcpy -  copy memory allocated in _memset
  *@dest: the destination to copy to
  *@src: the source from which the memory will be copied from
+ *@n: amount of bytes to be copied
  *
  *Return: the copied string
  */
