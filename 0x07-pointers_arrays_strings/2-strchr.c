@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  *_strchr - find 1st instance of character
  *@s: string to look for 1st instance character
@@ -16,5 +17,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return ("NULL");
+	return NULL;
 }
