@@ -1,11 +1,10 @@
 #include "main.h"
 /**
- *_pow_recursion - 
- *@x:
- *@y:
+ *_pow_recursion - recursively determining x^y
+ *@x: base
+ *@y: exponent
  *
  *Return: value to the power y
- * 
  */
 
 int _pow_recursion(int x, int y)
@@ -20,6 +19,6 @@ int _pow_recursion(int x, int y)
 	}
 	else
 	{
-		return (x * _pow_recursion(x, y -1));
+		return (x * _pow_recursion(x, y - 1));
 	}
 }
