@@ -16,7 +16,6 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-
 	if (grid != NULL)
 	{
 		int i = 0;
