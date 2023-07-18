@@ -21,4 +21,12 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 
 /*printing stuct dog*/
 void print_dog(struct dog *d);
+
+/* addition of a new dog*/
+dog_t *new_dog(char *name, float age, char *owner);
+
+int _strlen(char *s);
+
+char *_strcpy(char *dest, char *src);
+
 #endif
