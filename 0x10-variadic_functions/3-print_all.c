@@ -33,26 +33,24 @@ void print_all(const char * const format, ...)
 				 {
 					 char *str_arg = va_arg(args, char *);
 
-					 if (str_arg == NULL)
+					 if (str_arg == NULL || 
+							 printf("%s", str_arg) < 0)
 					 {
 						 printf("(nil)");
-					 }
-					 else
-					 {
-						 printf("%s", str_arg);
 					 }
 				 }
 				 break;
 			default:
 				 continue;
 		}
-		if (*ptr == ',' && *(ptr + 1) == ' ')
-		{
-			printf(", ");
-			ptr += 2;
-		}
 	}
+
+	if (*ptr == ',' && *(ptr + 1) == ' ')
+	{
+		printf(", ");
+		ptr += 2;
+	}
+
 	va_end(args);
 	printf("\n");
 }
-
