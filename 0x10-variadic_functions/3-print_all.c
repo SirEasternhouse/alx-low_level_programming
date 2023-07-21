@@ -22,60 +22,45 @@ int _putchar(char c)
  */
 void print_all(const char * const format, ...)
 {
-	int separator_flag = 0;
-
+	char ch;
 	const char *ptr = format;
 	va_list args;
-
 	va_start(args, format);
 
-	while (*ptr != '\0')
+	while ((ch = *ptr++) != '\0')
 	{
-		if (*ptr == 'c')
+		switch (ch)
 		{
-			if (separator_flag)
-				printf(", ");
-			_putchar(va_arg(args, int));
-			separator_flag = 1;
-		}
-		else if (*ptr == 'i')
-		{
-			if (separator_flag)
-				printf(", ");
-			printf("%d", va_arg(args, int));
-			separator_flag = 1;
-		}
-		else if (*ptr == 'f')
-		{
-			if (separator_flag)
-				printf(", ");
-			printf("%f", va_arg(args, double));
-			separator_flag = 1;
-		}
-		else if (*ptr == 's')
-		{
-			char *str_arg = va_arg(args, char *);
+			case 'c':
+				_putchar(va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':printf("%f", va_arg(args, double));
+				 break;
+			case 's':
+				 {
+					 char *str_arg = va_arg(args, char *);
 
-			if (str_arg == NULL)
-			{
-				if (separator_flag)
-					printf(", ");
-				printf("(nil)");
-			}
-			else
-			{
-				if (separator_flag)
-					printf(", ");
-				printf("%s", str_arg);
-			}
-			separator_flag = 1;
+					 if (str_arg == NULL)
+					 {
+						 printf("(nil)");
+					 }
+					 else
+					 {
+						 printf("%s", str_arg);}
+				 }
+				 break;
+			default:
+				 continue;
 		}
-		else
+		if (*ptr == ',' && *(ptr + 1) == ' ')
 		{
-			/* Ignore any other characters*/
+			printf(", ");ptr += 2;
 		}
-		ptr++;
 	}
 	va_end(args);
 	printf("\n");
 }
+
