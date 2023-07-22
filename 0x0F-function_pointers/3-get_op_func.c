@@ -4,8 +4,8 @@
 /**
  *get_op_func - get the operator function
  *
- *@char: typed operator
- *@int: integer argumetns to accept
+ *@s: typed operator
+ *
  *
  *Return: the operator function
  */
