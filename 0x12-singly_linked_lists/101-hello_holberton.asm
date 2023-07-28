@@ -12,5 +12,7 @@ main:
     mov rsi, hello_message   ; Second argument: address of the string to print
     call printf        ; Call the printf function
     add rsp, 8        ; Restore the stack pointer
+
+    xor rax, rax     ; Set rax to 0 (indicating success)
     ret               ; Return from the main function
 
