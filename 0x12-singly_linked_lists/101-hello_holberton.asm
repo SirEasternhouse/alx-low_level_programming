@@ -1,25 +1,16 @@
 section .data
-    hello db "Hello, Holberton", 0
-    format db "%s", 10, 0   ; "%s" format for printf followed by newline character
+    hello_message db "Hello, Holberton", 0
+    format_string db "%s", 10, 0   ; %s for string, 10 for newline, 0 for null terminator
 
 section .text
     global main
-
-extern printf
+    extern printf
 
 main:
-    ; Set up the stack frame if required (depends on platform and calling convention)
-    
-    ; Call printf with the format string and the address of "hello" string
-    lea rdi, [format]       ; Load the address of the format string into rdi
-    lea rsi, [hello]        ; Load the address of the "hello" string into rsi
-    xor rax, rax           ; Clear rax to indicate that there are no floating-point arguments
-    call printf            ; Call printf
-
-    ; Clean up the stack frame if required (depends on platform and calling convention)
-    
-    ; Return from the main function
-    mov rax, 60            ; syscall number for exit
-    xor edi, edi           ; exit code 0
-    syscall               ; invoke syscall to exit the program
+    sub rsp, 8       ; Align the stack on a 16-byte boundary (needed for printf)
+    mov rdi, format_string   ; First argument: format string
+    mov rsi, hello_message   ; Second argument: address of the string to print
+    call printf        ; Call the printf function
+    add rsp, 8        ; Restore the stack pointer
+    ret               ; Return from the main function
 
