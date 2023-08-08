@@ -5,6 +5,26 @@
 #include <unistd.h>
 #include "main.h"
 /**
+ *print_error - print an error message
+ *@message: message to print
+ *
+ *Return: none
+ */
+void print_error(const char *message)
+{
+	const char *c;
+
+	c = message;
+
+	while (*c != '\0')
+	{
+		putchar(*c);
+		c++;
+	}
+	putchar('\n');
+}
+
+/**
  * create_file - create a file with permission
  *@filename: the name of the file to read
  *@text_content: text content to use
@@ -27,7 +47,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (fd == -1)
 	{
-		perror("Error creating file");
+		print_error("Error creating file");
 		return (-1);
 	}
 
@@ -39,7 +59,7 @@ int create_file(const char *filename, char *text_content)
 		if (bytes_written != (ssize_t)content_length)
 		{
 			close(fd);
-			perror("Error writing to file");
+			print_error("Error writing to file");
 			return (-1);
 		}
 	}
