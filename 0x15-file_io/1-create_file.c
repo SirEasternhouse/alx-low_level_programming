@@ -5,6 +5,17 @@
 #include <unistd.h>
 #include "main.h"
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+/**
  *print_error - print an error message
  *@message: message to print
  *
@@ -18,10 +29,10 @@ void print_error(const char *message)
 
 	while (*c != '\0')
 	{
-		putchar(*c);
+		_putchar(*c);
 		c++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
 
 /**
