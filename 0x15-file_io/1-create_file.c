@@ -10,6 +10,7 @@
  *
  *Return: none
  */
+/*
 void print_error(const char *message)
 {
 	const char *c;
@@ -22,7 +23,7 @@ void print_error(const char *message)
 		c++;
 	}
 	putchar('\n');
-}
+}*/
 
 /**
  * create_file - create a file with permission
@@ -47,11 +48,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (fd == -1)
 	{
-		print_error("Error creating file");
+		perror("Error creating file");
 		return (-1);
 	}
 
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
 		content_length = strlen(text_content);
 		bytes_written = write(fd, text_content, content_length);
@@ -59,7 +60,7 @@ int create_file(const char *filename, char *text_content)
 		if (bytes_written != (ssize_t)content_length)
 		{
 			close(fd);
-			print_error("Error writing to file");
+			perror("Error writing to file");
 			return (-1);
 		}
 	}
