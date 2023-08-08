@@ -5,27 +5,6 @@
 #include <unistd.h>
 #include "main.h"
 /**
- *print_error - print an error message
- *@message: message to print
- *
- *Return: none
- */
-/*
-void print_error(const char *message)
-{
-	const char *c;
-
-	c = message;
-
-	while (*c != '\0')
-	{
-		putchar(*c);
-		c++;
-	}
-	putchar('\n');
-}*/
-
-/**
  * create_file - create a file with permission
  *@filename: the name of the file to read
  *@text_content: text content to use
