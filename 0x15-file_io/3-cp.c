@@ -17,8 +17,10 @@ void copy_file(const char *file_from, const char *file_to)
 	int fd_from, fd_to;
 	ssize_t bytes_read, bytes_written;
 	char buffer[1024];
+	mode_t old_umask = umask(002);
 
 	fd_from = open(file_from, O_RDONLY);
+	umask(old_umask);
 
 	if (fd_from == -1)
 	{
