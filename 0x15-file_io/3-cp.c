@@ -30,7 +30,7 @@ void copy_file(const char *file_from, const char *file_to)
 
 	if (fd_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can'to file %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 		close(fd_from);
 		exit(99);
 	}
