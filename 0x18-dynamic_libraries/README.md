@@ -1,1 +1,0 @@
-creation of dynamic libraries
