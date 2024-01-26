@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *sum_dlisint - sum of a doubly linked list
- *@head: head of node
+ * sum_dlistint - sum of a doubly linked list
+ * @head: head of node
  *
- *
- *Return: sum of doubly linked list
+ * Return: The sum of doubly linked list
  */
-int sum_dlistint(dlistint_t *head)
+int sum_dlistint(dlistint_t *head) /*sum doubly linked list*/
 {
 	int sum = 0;
 
