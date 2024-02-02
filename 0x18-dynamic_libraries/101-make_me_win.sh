@@ -1,3 +1,2 @@
 #!/bin/bash
-GM_EXECUTABLE="./gm"
-LD_PRELOAD="$PWD" "GM_EXECUTABLE" 9 8 10 24 75 9
+LD_PRELOAD=$PWD/101-md5_gm ./gm 9 8 10 24 75 9
