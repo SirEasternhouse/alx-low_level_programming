@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""calculation of grid size"""
+
 
 def island_perimeter(grid):
     """
