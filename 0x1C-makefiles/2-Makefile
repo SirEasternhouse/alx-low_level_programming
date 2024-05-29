@@ -1,0 +1,20 @@
+# Variables
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Target to build the executable
+all: $(NAME)
+
+# Rule to build the executable from object files
+$(NAME): $(OBJ)
+	$(CC) -o $(NAME) $(OBJ)
+
+# Pattern rule to compile .c files to .o files
+%.o: %.c m.h
+	$(CC) -c $< -o $@
+
+# Clean up build files
+clean:
+	rm -f $(OBJ) $(NAME)
